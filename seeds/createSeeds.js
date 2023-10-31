@@ -25,31 +25,37 @@ console.log(RANDOMUSERS)
 
 /////////////////////  USE NEW postdata.json /////////////////////
 
-// const POSTS = [];
+const POSTS = [];
 
-// function createRandomPost() {
-//     return {
-//         title: faker.lorem.words(Math.ceil(Math.random() * 5)),
-//         content: faker.lorem.paragraphs(Math.ceil(Math.random() * 4)),
-//         date_created: faker.date.between('2020-01-01T00:00:00.000Z', '2023-01-01T00:00:00.000Z'),
-//         user_id: Math.ceil(Math.random() * RANDOMUSERS.length)
-//     };
-// }
+function createRandomPost() {
+    return {
+        title: faker.lorem.words(Math.ceil(Math.random() * 5)),
+        content: faker.lorem.paragraphs(Math.ceil(Math.random() * 4)),
+        date_created: faker.date.between({
+            from: '2020-01-01T00:00:00.000Z', 
+            to: '2023-01-01T00:00:00.000Z'
+        }),
+        user_id: Math.ceil(Math.random() * RANDOMUSERS.length)
+    };
+}
 
-// Array.from({ length: 15 }).forEach(() => {
-//     POSTS.push(createRandomPost());
-// });
+Array.from({ length: 15 }).forEach(() => {
+    POSTS.push(createRandomPost());
+});
 
-// console.log(POSTS)
+console.log(POSTS)
 
 const COMMENTS = [];
 
 function createRandomComment() {
     return {
         comment: faker.lorem.paragraphs(1),
-        date_created: faker.date.between('2020-01-01T00:00:00.000Z', '2023-01-01T00:00:00.000Z'),
+        date_created: faker.date.between({
+            from:'2020-01-01T00:00:00.000Z', 
+            to: '2023-01-01T00:00:00.000Z'
+        }),
         user_id: Math.ceil(Math.random() * RANDOMUSERS.length),
-        post_id: Math.ceil(Math.random() * 26)
+        post_id: Math.ceil(Math.random() * 15)
     };
 }
 
@@ -59,6 +65,7 @@ Array.from({ length: 25 }).forEach(() => {
 
 console.log(COMMENTS)
 
-// writeFileSync(path.join(process.cwd(), "seeds", "post_data.json"), JSON.stringify(POSTS, null, 2))
 writeFileSync(path.join(process.cwd(), "seeds", "user_data.json"), JSON.stringify(RANDOMUSERS, null, 2))
+writeFileSync(path.join(process.cwd(), "seeds", "post_data.json"), JSON.stringify(POSTS, null, 2))
 writeFileSync(path.join(process.cwd(), "seeds", "comment_data.json"), JSON.stringify(COMMENTS, null, 2))
+
