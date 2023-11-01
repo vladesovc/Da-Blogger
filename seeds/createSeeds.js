@@ -32,7 +32,7 @@ function createRandomPost() {
         title: faker.lorem.words(Math.ceil(Math.random() * 5)),
         content: faker.lorem.paragraphs(Math.ceil(Math.random() * 4)),
         date_created: faker.date.between({
-            from: '2020-01-01T00:00:00.000Z', 
+            from: '2020-01-01T00:00:00.000Z',
             to: '2023-01-01T00:00:00.000Z'
         }),
         user_id: Math.ceil(Math.random() * RANDOMUSERS.length)
@@ -51,7 +51,7 @@ function createRandomComment() {
     return {
         comment: faker.lorem.paragraphs(1),
         date_created: faker.date.between({
-            from:'2020-01-01T00:00:00.000Z', 
+            from: '2020-01-01T00:00:00.000Z',
             to: '2023-01-01T00:00:00.000Z'
         }),
         user_id: Math.ceil(Math.random() * RANDOMUSERS.length),
