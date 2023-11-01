@@ -1,4 +1,4 @@
-# Da Blogger
+# The !false Coding Blog!
 
   [![License MIT](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
   
@@ -19,11 +19,11 @@
 
 ## Usage
 <a name="usage"></a>
-  Usage instructions include - the ability to log in and log using the main promt on the homepage. You can also sign up to access the action blogging aspect of the application. Once you have signed up and signed in, you may make a post and or comment on other peoples posts! 
+  Usage instructions include - the ability to log in and log using the main promt on the homepage. You can also sign up to access the action blogging aspect of the application. Once you have signed up and signed in, you may make a post and or comment on other people's posts! 
 
 
 ## Credits
-  Collaborators with this project include Google, ChatGPT, along with the creators of Faker so I could utilize created data.
+  Collaborators with this project include Google, ChatGPT along with Tutors for the Bootcamp as well. Code has also been utilized from all Class Modules up to and including Module 14. 
 
 
 ## License
